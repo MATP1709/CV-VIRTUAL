@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para poder poner bien el padding*/
+    text-decoration: none; /*es para quitar el subrayado a las palabras*/
+    font-family: 'Open sans', sans-serif; /*Arial, Helvetica, sans-serif;*/
+}
+
+body{
+    
+}
