@@ -3,9 +3,130 @@
     padding: 0;
     box-sizing: border-box; /*para poder poner bien el padding*/
     text-decoration: none; /*es para quitar el subrayado a las palabras*/
-    font-family: 'Open sans', sans-serif; /*Arial, Helvetica, sans-serif;*/
+    list-style: none; /*para eliminar las bolitas de la listas creadas*/
+}
+/*para editar la imagen de fondo */
+body{
+    height: 100vh;
+    background-image: url(/img/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(50%); /* bajarle la opasidad*/
+}
+li{
+    list-style: none;
+}
+/*HEADER*/
+.menu1{
+    padding: 25px;
 }
 
-body{
-    
+.navbar
+.menu{    
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*p*/
+   /* width: 100%;
+    padding: 30px;
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*p*/
 }
+/*para que funcione el menu despegable*/
+header {
+    position: relative;
+}
+
+.logo{
+    font-size: 35px;
+    color: rgb(66, 155, 238);
+    font-weight: bold; /*para el grosor de las letras*/
+   /* text-transform: uppercase; para que el contenido este en mayusculas*/
+    text-decoration: none;
+}
+
+.menu .navbar ul li{ /* para acomodar los items del navbar*/ 
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+ font-size: 20px;
+ padding: 25px; /*para la distancia de los items*/
+ color: azure;
+ text-decoration: none;
+ display: block; /*para que el padding pueda aplicarse correctame*/
+}
+
+.menu .navbar ul li a:hover{ /*para que cada vez que se pase el mause se cambie el color*/
+    color: #429bee;
+    /*border-bottom: solid 3px #429bee; /*para darle color a la parte de abajo*/
+}
+
+.action-btn{
+    background-color: #1f53c5;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: bold;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#menu{/*para borrar el icono*/
+    display: none;
+}
+
+/*para darle tamaño al icono*/
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{ /*para ocultar la imagen de menu de 3 rayas*/
+    cursor: pointer;
+    display: none;
+}
+/*para realizar efectos visuales si se habre por una app -- RESPONSIVE*/
+
+@media (max-width:1460px) {
+    .logo{
+        font-size: 35px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+    
+    .menu .navbar{ /*solo editamos a todos los contenidos dentro del div*/
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+        background-color: #24303c;
+        z-index: 700;
+        display: none; /*para que momentariamente no se vea el menu*/
+    }
+
+    .menu .navbar ul li { /*modificamos los que estan dentro del div ul - li*/
+        width: 100%; /*para que este en forma de columna*/
+    }
+    .menu .navbar ul li a{ /*modificamos a los textos que estan dentro de ul li*/
+        font-size: 14px;
+        padding: 13px;
+    }
+     /*alt + 126 ~*/
+    #menu:checked ~ .navbar{ /*se active el desplegable del menu*/ 
+        display: initial;
+    }
+}
+/*HEADER FIN*/

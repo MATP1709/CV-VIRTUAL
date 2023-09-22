@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*para poder poner bien el padding*/
+    text-decoration: none; /*es para quitar el subrayado a las palabras*/
+    font-family: 'Open sans', sans-serif; /*Arial, Helvetica, sans-serif;*/
+}
+
+
+body{
+    height: 100vh;
+    background-image: url(/img/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(60%); /* bajarle la opasidad*/
+}
+
+li{
+    list-style: none;
+}
+
+a{    
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* cada vez que pasa el puntero*/
+a:hover{
+    color: #1f53c5;
+    cursor: pointer;
+}
+.action-btn a:hover{
+    color: #fff;
+}
+
+header {
+    position: relative;
+    padding: 30px;
+    /*background-color: #24303c;
+    /*padding: 0 2rem;*/
+}
+/*para darle color cada vez que pase el puntero*/
+.action-btn:hover{
+    color: white;
+    scale: 1.40;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*p*/
+}
+
+/*DAMOS FORMA AL LOGO DE LA PAGINA (NOMBRE)*/
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: bold;
+    color: #1f53c5;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 45px; /* para darle espacio de lados*/
+}
+
+.action-btn{
+    background-color: #1f53c5;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: bold;
+    cursor: pointer;
+    font-weight: bold;
+}
+#menu{/*para borrar el icono*/
+    display: none;
+}
+.menu label{ /*para ocultar la imagen de menu de 3 rayas*/
+    cursor: pointer;
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media (max-width:1460px){
+    .navbar .links,.navbar .action-btn{
+        display: none;
+    }
+    .navbar .action-btn{
+        display: block;
+    }
+}
+
+/**/
+
+
+/**/
+/**/
+/**/
+/**/
+
+
+/*------MENU------*/
+/*para borrar el icono*/
+#menu{
+    display: none;
+}
+
+/*para darle tamaño al icono*/
+.menu-icono{
+    width: 25px;
+}
+
+#menu label{ /*para ocultar la imagen de menu de 3 rayas*/
+    cursor: pointer;
+    display: none;
+}
